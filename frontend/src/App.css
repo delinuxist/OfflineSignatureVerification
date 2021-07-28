@@ -1,3 +1,46 @@
 h1 {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+.nav-style {
+  background-color: rgba(15, 14, 14, 0.3);
+}
+
+.logo-style {
+  width: 6rem;
+  height: 4rem;
+  margin-right: auto;
+}
+
+.background {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("./img/background-image-2399548.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.pad-top {
+  padding-top: 7rem;
+}
+
+/* nav {
+  z-index: 2;
+} */
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.main-info {
+  z-index: 3;
+}
+
+.card-style {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 8px 20px #444;
 }

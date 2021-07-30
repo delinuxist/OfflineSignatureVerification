@@ -1,16 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./ActionButton.css";
 
 function ActionButton(props) {
   return (
-    <button
-      className="ActionButton"
+    <motion.button
+      whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{
+        scale: 0.9,
+      }}
+      className=" ActionButton"
       onClick={props.onClick}
 
-      //  onClick={props.handleClick}
+      // onClick={props.handleClick}
     >
       {props.text}{" "}
-    </button>
+    </motion.button>
   );
 }
 export default ActionButton;

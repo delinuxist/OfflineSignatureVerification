@@ -8,8 +8,16 @@ const Navbar = () => {
   return (
     <nav className="navbar justify-content-center nav-style">
       <motion.img
-        animate={{ rotate: 360 }}
-        transition={{ duration: 2 }}
+        animate={{
+          x: 0,
+          rotate: 360,
+        }}
+        transition={{
+          duration: 2,
+        }}
+        initial={{
+          x: 200,
+        }}
         className="navbar-brand  logo-style "
         src={logo}
         alt=""

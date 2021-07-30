@@ -1,9 +1,12 @@
-h1 {
-  margin-left: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: initial;
 }
 
 .nav-style {
-  background-color: rgba(15, 14, 14, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .logo-style {
@@ -18,20 +21,25 @@ h1 {
     url("./img/background-image-2399548.jpg");
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .pad-top {
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 
-/* nav {
-  z-index: 2;
-} */
+@media only screen and (max-width: 450px) {
+  .pad-top {
+    padding-top: 1rem;
+  }
+}
 
 .tsparticles-canvas-el {
   position: absolute;
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   z-index: 1;
 }

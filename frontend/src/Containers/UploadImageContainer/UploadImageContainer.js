@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "../../Components/TextField/TextField";
 import BrowseImages from "../../Components/BrowseImages/BrowseImages";
 import ActionButton from "../../Components/ActionButton/ActionButton";
+import { motion } from "framer-motion";
 import "./UploadImageContainer.css";
 
 function UploadImageContainer(props) {
@@ -45,25 +46,41 @@ function UploadImageContainer(props) {
 
   return (
     <div className="UploadImageContainer col-lg-6 ">
-      <div className="card card-style text-light">
-        <div className="card-body">
-          <h5 className="card-title">{props.headingText}</h5>
+      <motion.div
+        animate={{
+          x: 0,
+        }}
+        initial={{
+          x: 300,
+        }}
+        transition={{
+          type: "spring",
+          duration: 1,
+        }}
+      >
+        <div className="card card-style text-light">
+          <div className="card-body">
+            <h5 className="card-title">{props.headingText}</h5>
 
-          <TextField hint="Customer ID" setCustomerID={setCustomerID} />
-          <ActionButton text={props.submitButtonText} handleClick={postData} />
-          <BrowseImages
-            imgLimit={props.imgLimit}
-            allowMultiple={props.allowMultiple}
-            fileUrl={fileUrl}
-            setFileUrl={setFileUrl}
-            filesValid={filesValid}
-            setFilesValid={setFilesValid}
-            file={file}
-            setFile={setFile}
-          />
-          <label style={{ color: errorColor }}>{errorText}</label>
+            <TextField hint="Customer ID" setCustomerID={setCustomerID} />
+            <ActionButton
+              text={props.submitButtonText}
+              handleClick={postData}
+            />
+            <BrowseImages
+              imgLimit={props.imgLimit}
+              allowMultiple={props.allowMultiple}
+              fileUrl={fileUrl}
+              setFileUrl={setFileUrl}
+              filesValid={filesValid}
+              setFilesValid={setFilesValid}
+              file={file}
+              setFile={setFile}
+            />
+            <label style={{ color: errorColor }}>{errorText}</label>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

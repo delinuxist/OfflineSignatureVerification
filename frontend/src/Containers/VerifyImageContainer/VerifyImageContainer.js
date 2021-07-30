@@ -50,7 +50,18 @@ function VerifyImageContainer(props) {
   };
   return (
     <div className="VerifyImageContainer col-lg-6">
-      <motion.div>
+      <motion.div
+        animate={{
+          x: 0,
+        }}
+        initial={{
+          x: -300,
+        }}
+        transition={{
+          type: "spring",
+          duration: 1,
+        }}
+      >
         <div className="card card-style text-light">
           <div className="card-body">
             <h5 className="card-title">{props.headingText}</h5>

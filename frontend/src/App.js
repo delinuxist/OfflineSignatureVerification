@@ -43,7 +43,7 @@ function App() {
       </div>
 
       <div className="background">
-        <div className="container pad-top">
+        <div className="container-fluid pad-top">
           <div className="row justify-content-center">
             <div className="row justify-content-center main-info">
               <UploadImageContainer
